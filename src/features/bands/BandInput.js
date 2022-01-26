@@ -14,14 +14,20 @@ function BandInput({ onBandSubmit }) {
     setName(e.target.value)
   }
 
-  console.log(name)
   return (
     <form onSubmit={handleBandSubmit}>
       <p>
-        <label>Add band</label>
-        <input type="text" value={name} onChange={handleChange} />
+        <label>
+          Name
+          <input 
+            type="text" 
+            name="name" 
+            value={name} 
+            onChange={handleChange} 
+          />
+        </label>
       </p>
-      <input type="submit" />
+      <button type="submit">Add Band</button>
     </form>
   );
 }
